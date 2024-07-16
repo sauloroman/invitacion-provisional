@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.hero {
+
+  text-align: center;
+
+  &__container {
+    padding-top: 6rem;
+  }
+
+  &__message {
+    max-width: 50rem;
+    margin-bottom: 6rem;
+
+    &--2  {
+      max-width: 40rem;
+    }
+  }
+
+  &__name {
+    font-size: 2.8rem;
+    font-family: v.$font-alter;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    letter-spacing: 6px;
+  }
+  
+  &__text, &__hour, &__location, &__address {
+    line-height: 1.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 200;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+
+    span {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__hour {
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+  }
+  
+  &__location {
+    margin-bottom: 0;
+  }
+  
+  &__date {
+    color: v.$color-golden-dark;
+    font-size: 2.8rem;
+    font-weight: 200;
+    font-family: v.$font-alter;
+    letter-spacing: 8px;
+    margin-bottom: 2rem;
+  }
+
+  &__line {
+    @include m.line( 10rem, v.$color-pink-dark );
+  }
+
+}

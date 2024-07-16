@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.form {
+
+  width: 50rem;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  
+  @include m.responsiveDesign( tab-port ) {
+    width: 80rem;
+    max-width: 85%;
+  }
+
+  &__field {
+    margin-bottom: v.$general-gap;
+  }
+
+  &__label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      text-transform: lowercase;
+       &::first-letter {
+        text-transform: uppercase;
+       }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1.8rem;
+
+    @include m.responsiveDesign( tab-port ) {
+      padding: 1.5rem 1rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__span {
+    text-align: right;
+    display: block;
+    font-family: v.$font-alter;
+    font-weight: 200;
+    font-size: 1.2rem;
+  }
+
+}

@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.search {
+  
+  padding: 7rem 0;
+
+  &__container {
+    height: 100%;
+    text-align: center
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+
+  &__line {
+    @include m.line(7rem, rgba(255, 255, 255, .4));
+    &::after {
+      display: none;
+    }
+  }
+
+  &__dire {
+    margin: 6rem auto;
+    font-family: v.$font-alter;
+    letter-spacing: 2px;
+    font-weight: 200;
+    width: 70%;
+    line-height: 2;
+  }
+
+  &__form {
+    width: 80%;
+    margin: 0 auto;
+
+    .form__field {
+      text-align: left;
+      font-family: v.$font-alter;
+      margin-bottom: 2rem;
+    }
+
+    .form__label {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+
+    .form__input {
+      padding: .7rem;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, .4);
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .search__button {
+      button { width: 100%;}
+    }
+  }
+
+}

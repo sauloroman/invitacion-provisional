@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.students {
+  
+  margin-top: 5rem;
+
+  &__container {
+    padding: 4rem 0;
+    background-color: v.$color-pink;
+  }
+
+  &__text {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    color: #000;
+    font-family: v.$font-alter;
+    font-weight: 300;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__line {
+    @include m.line( 5rem, #000 );
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+
+  &__top {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 3rem;
+  }
+
+  &__image {
+    height: 30rem;
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: v.$color-pink;
+    opacity: .4;
+  }
+
+  &__lineBigger {
+    @include m.line( 10rem, v.$color-pink-dark )
+  }
+
+}

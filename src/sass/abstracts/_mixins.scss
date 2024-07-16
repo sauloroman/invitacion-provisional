@@ -1,0 +1,50 @@
+@mixin responsiveDesign( $breakpoint ) {
+
+  @if $breakpoint == phone {
+    @media ( max-width: 576px ) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media ( max-width: 768px ) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media ( max-width: 992px ) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media ( max-width: 1200px ) {
+      @content;
+    }
+  }
+
+}
+
+@mixin line( $height, $color ) {
+  display: block;
+  margin: 0 auto;
+  width: 1px;
+  height: $height;
+  background-color: $color;
+  position: relative;
+  transition: all .4s ease-out;
+   
+  &::after {
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-45%, 5%);
+  }
+}
